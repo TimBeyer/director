@@ -1,8 +1,8 @@
 
 
 //
-// Generated on Fri Dec 27 2013 12:02:11 GMT-0500 (EST) by Nodejitsu, Inc (Using Codesurgeon).
-// Version 1.2.2
+// Generated on Mon Mar 31 2014 11:15:13 GMT+0200 (CEST) by Nodejitsu, Inc (Using Codesurgeon).
+// Version 1.2.3
 //
 
 (function (exports) {
@@ -202,6 +202,7 @@ Router.prototype.init = function (r) {
     self.dispatch('on', url.charAt(0) === '/' ? url : '/' + url);
   };
 
+  listener.init(this.handler, this.history);
 
   var routeTo = r ? r : null;
   // Replaces URL in case we init the URL explicitly
