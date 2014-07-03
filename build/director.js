@@ -72,8 +72,10 @@ var listener = {
     }
 
     function onchange(onChangeEvent) {
-      for (var i = 0, l = Router.listeners.length; i < l; i++) {
-        Router.listeners[i](onChangeEvent);
+      if (onChangeEvent.state !== null) {
+        for (var i = 0, l = Router.listeners.length; i < l; i++) {
+          Router.listeners[i](onChangeEvent);
+        }
       }
     }
 
